@@ -1,0 +1,81 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <title>Life Expectancy</title>
+        <style>
+            div {
+              margin-bottom: 10px;
+            }
+            label {
+                display: inline-block;
+                width: 200px;
+              }
+          </style>
+    </head>
+    <body style="background: linear-gradient(to bottom, #3399ff 0%, #ffffff 100%);" >
+        <h1 style="text-align:center">Life Expectancy Predictor</h1>
+        <center>
+        <form action="/" method="POST">
+            <div>
+            <label for="name">Country name:</label>
+            <input  type="text"  name="Country"  required="required" />   </br>
+            </div>
+            <div>
+                <label for="name">Year</label>            
+            <input type="number" step="any" name="Year" required="required" /></br>
+            </div>
+            <div>
+                <label for="name">Adult Mortality</label>
+            <input type="number"step="any" name="AdultMortality" required="required" /></br>
+            </div>
+            <div>
+                <label for="name">Alcohol</label>
+            <input type="number"step="any" name="Alcohol" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">Percentage Expenditure</label>
+            <input type="number"step="any" name="percentageexpenditure" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">Hepatitis B</label>
+            <input type="number"step="any" name="HepatitisB" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">Measles</label>
+            <input type="number"step="any" name="Measles" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">BMI</label>
+            <input type="number"step="any" name="BMI" required="required" /></br>
+        </div>       
+            <div>
+            <label for="name">Total Expenditure</label>
+            <input type="number"step="any" name="Totalexpenditure" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">HIV/AIDS</label>
+            <input type="number"step="any" name="HIV/AIDS" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">GDP</label>
+            <input type="number"step="any" name="GDP" required="required" /></br>
+        </div>
+            <div>
+                <label for="name">Thinness1-19years</label>
+            <input type="number"step="any" name="thinness1-19years" required="required" /></br>
+        </div>        
+            <div>
+                <label for="name">Thinness5-9years</label>
+            <input type="number"step="any" name="thinness5-9years" required="required" /></br>
+        </div>
+          <button type="submit" style="width: 300px; margin-left: 17%;" class="btn btn-primary btn-block btn-large">Submit</button>
+        </form>
+    </center>
+
+        <p style="margin-left: 40%;"> Avg life expectancy in terms of age</p>
+        {% if prediction %}
+            <h1 style="text-align:center; color:Crimson; font-size: 20px; " >{{ prediction }}</h1>
+        {% endif %}
+
+    </body>
+</html>
