@@ -6,7 +6,7 @@ import seaborn as sns
 import os
 import joblib
 
-df=pd.read_csv('E:\DEPLOYMENT\Life_expectancy\led.csv')
+df=pd.read_csv('led.csv')
 
 df.drop(["Population"],axis=1,inplace=True)
 
